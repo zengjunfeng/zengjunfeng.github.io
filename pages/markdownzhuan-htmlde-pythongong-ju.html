@@ -26,6 +26,10 @@ Pelican 和 Jekll 都可以将 Markdown 或 reStructuredText 中编写的内容�
 </code></pre></div>
 
 
+<h2>创建库然后clone到本地</h2>
+<p>本文以 <code>https://GitHub.com/username/username.github.io</code>为例。username需要替换为自己的用户名。</p>
+<h2>创建一个分支content，并检出</h2>
+<p><code>$ git checkout -b content</code></p>
 <h2>配置pelican</h2>
 <p>如<a href=".\github_pages_创建.md">github pages 创建</a>所说，内容和展示一般建议放在不同的分支。</p>
 <p>初始化应该在内容分支上运行。</p>
@@ -62,7 +66,47 @@ Pelican 和 Jekll 都可以将 Markdown 或 reStructuredText 中编写的内容�
 * 网站标题，应该唯一且特殊
 * 网站作者，可以是个人用户名或你的全名
 * 时区，可能你不在巴黎
-* 上传到 GitHub 页面，我们选择</p>
+* 上传到 GitHub 页面，我们选择
+回答完所有问题后，Pelican 会在当前目录中留下以下内容：</p>
+<div class="highlight"><pre><span></span><code>$ ls
+Makefile      content/     develop_server.sh*
+fabfile.py    output/      pelicanconf.py
+publishconf.py
+</code></pre></div>
+
+
+<p>可以看到pelican自动创建了两个新目录。</p>
+<h2>将生成的文件提交到本地仓库中</h2>
+<h2>在content目录下建立两个新的文件夹<em>pages</em>和<em>images</em></h2>
+<p>文件名是pelican的约定，必须相同。
+在pages下放置创建的网页markdown源文件。</p>
+<h2>生成</h2>
+<p>在output中生成html文件</p>
+<div class="highlight"><pre><span></span><code>$ pelican content -o output -s publishconf.py
+</code></pre></div>
+
+
+<h2>导出</h2>
+<p>将output中的文件导出到master分支中</p>
+<div class="highlight"><pre><span></span><code><span class="err">$</span> <span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Generate Pelican site&quot;</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">jekyll</span> <span class="o">-</span><span class="n">b</span> <span class="n">master</span> <span class="n">output</span>
+</code></pre></div>
+
+
+<h2>将本地内容推送到github即可访问相关网页</h2>
+<div class="highlight"><pre><span></span><code>$ git add content
+$ git commit -m <span class="s1">&#39;added a first post, a photo and an about page&#39;</span> $ git push origin content
+</code></pre></div>
+
+
+<h2>访问</h2>
+<div class="highlight"><pre><span></span><code><span class="c">https://username.github.io</span>
+</code></pre></div>
+
+
+<p><img alt="图片测试1" src="green_ground.jpg">
+![图片测试2][..\images\green_ground.jpg]
+<img alt="图片测试3" src="..\images\green_ground.jpg">
+<img alt="图片测试4" src="D:\workspace\github\zengjunfeng.github.io\output\images"></p>
 <p>参考：
 <a href="https://zhuanlan.zhihu.com/p/122956498">使用 Python 在 GitHub 上运行你的博客</a></p>
 </section>
