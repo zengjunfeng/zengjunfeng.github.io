@@ -83,10 +83,8 @@ $ git commit -m 'added a first post, a photo and an about page' $ git push origi
 ```
 https://username.github.io
 ```
-![图片测试1](green_ground.jpg)
-![图片测试2][..\images\green_ground.jpg]
+
 ![图片测试3](..\images\green_ground.jpg)
-![图片测试4](D:\workspace\github\zengjunfeng.github.io\output\images)
 
 参考：
 [使用 Python 在 GitHub 上运行你的博客](https://zhuanlan.zhihu.com/p/122956498)
