@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="chinese (simplified)">
+<head>
+        <meta charset="utf-8" />
+        <title>导出页面的工具</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="资料收集与整理 Atom Feed" />
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">资料收集与整理 </a></h1>
+                <nav><ul>
+                    <li><a href="/pages/github-pages-ji-ben-she-zhi.html">github pages 基本设置</a></li>
+                    <li class="active"><a href="/pages/dao-chu-ye-mian-de-gong-ju.html">导出页面的工具</a></li>
+                    <li><a href="/pages/markdownzhuan-htmlde-pythongong-ju.html">markdown转html的python工具</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+    <h1 class="entry-title">导出页面的工具</h1>
+    
+    <p>使用ghp-import将重写gh-pages分支。使用前要确保该分支的数据已得到适当备份。这个工具假定gh-pages branch是100%导出的，因此，你不应该修改该分支的任何文件，否则在下次导出时会导致损失。</p>
+<h2>使用方法：</h2>
+<div class="highlight"><pre><span></span><code><span class="n">Usage</span><span class="p">:</span> <span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="n">DIRECTORY</span>
+
+<span class="n">Options</span><span class="p">:</span>
+  <span class="o">-</span><span class="n">n</span><span class="p">,</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">jekyll</span>       <span class="n">Include</span> <span class="n">a</span> <span class="o">.</span><span class="n">nojekyll</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">branch</span><span class="o">.</span>
+  <span class="o">-</span><span class="n">c</span> <span class="n">CNAME</span><span class="p">,</span> <span class="o">--</span><span class="n">cname</span><span class="o">=</span><span class="n">CNAME</span>
+                        <span class="n">Write</span> <span class="n">a</span> <span class="n">CNAME</span> <span class="nb">file</span> <span class="k">with</span> <span class="n">the</span> <span class="n">given</span> <span class="n">CNAME</span><span class="o">.</span>
+  <span class="o">-</span><span class="n">m</span> <span class="n">MESG</span><span class="p">,</span> <span class="o">--</span><span class="n">message</span><span class="o">=</span><span class="n">MESG</span>
+                        <span class="n">The</span> <span class="n">commit</span> <span class="n">message</span> <span class="n">to</span> <span class="n">use</span> <span class="n">on</span> <span class="n">the</span> <span class="n">target</span> <span class="n">branch</span><span class="o">.</span>
+  <span class="o">-</span><span class="n">p</span><span class="p">,</span> <span class="o">--</span><span class="n">push</span>            <span class="n">Push</span> <span class="n">the</span> <span class="n">branch</span> <span class="n">to</span> <span class="n">origin</span><span class="o">/</span><span class="p">{</span><span class="n">branch</span><span class="p">}</span> <span class="n">after</span> <span class="n">committing</span><span class="o">.</span>
+  <span class="o">-</span><span class="n">f</span><span class="p">,</span> <span class="o">--</span><span class="n">force</span>           <span class="n">Force</span> <span class="n">the</span> <span class="n">push</span> <span class="n">to</span> <span class="n">the</span> <span class="n">repository</span>
+  <span class="o">-</span><span class="n">r</span> <span class="n">REMOTE</span><span class="p">,</span> <span class="o">--</span><span class="n">remote</span><span class="o">=</span><span class="n">REMOTE</span>
+                        <span class="n">The</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">remote</span> <span class="n">to</span> <span class="n">push</span> <span class="n">to</span><span class="o">.</span> <span class="p">[</span><span class="n">origin</span><span class="p">]</span>
+  <span class="o">-</span><span class="n">b</span> <span class="n">BRANCH</span><span class="p">,</span> <span class="o">--</span><span class="n">branch</span><span class="o">=</span><span class="n">BRANCH</span>
+                        <span class="n">Name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">branch</span> <span class="n">to</span> <span class="n">write</span> <span class="n">to</span><span class="o">.</span> <span class="p">[</span><span class="n">gh</span><span class="o">-</span><span class="n">pages</span><span class="p">]</span>
+  <span class="o">-</span><span class="n">s</span><span class="p">,</span> <span class="o">--</span><span class="n">shell</span>           <span class="n">Use</span> <span class="n">the</span> <span class="n">shell</span> <span class="n">when</span> <span class="n">invoking</span> <span class="n">Git</span><span class="o">.</span> <span class="p">[</span><span class="bp">False</span><span class="p">]</span>
+  <span class="o">-</span><span class="n">l</span><span class="p">,</span> <span class="o">--</span><span class="n">follow</span><span class="o">-</span><span class="n">links</span>    <span class="n">Follow</span> <span class="n">symlinks</span> <span class="n">when</span> <span class="n">adding</span> <span class="n">files</span><span class="o">.</span> <span class="p">[</span><span class="bp">False</span><span class="p">]</span>
+  <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>            <span class="n">show</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span> <span class="ow">and</span> <span class="nb">exit</span>
+</code></pre></div>
+
+
+<p>在你的库里，只需要运行 <code>ghp-import $DOCS_DIR</code> ，<code>$DOCS_DIR</code>是准备<strong>built</strong>的文档的路径。这个操作会在你的gh-pages分支做一次提交(commit)。如果指定 <code>-p</code> 选项，就会尝试将分支push到github。缺省情况下，相当于运行 <code>git push origin gh-pages</code>，你也可以用 <code>-r</code> flag来指定不同的remote。</p>
+<p>你可以用 <code>-b</code>指定不同的分支。</p>
+<p>一些windows用户可能需要通过shell来运行git命令，这可以通过指定 <code>-s</code>来实现。</p>
+<h2>License</h2>
+<p>ghp-import is distributed under the Tumbolia Public License. See the LICENSE file for more information.</p>
+<p>参考：
+1. <a href="https://github.com/davisp/ghp-import">包作者文档</a></p>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
