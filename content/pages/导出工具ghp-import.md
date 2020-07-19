@@ -25,6 +25,10 @@ Options:
   -l, --follow-links    Follow symlinks when adding files. [False]
   -h, --help            show this help message and exit
 ```
+举例：将 output 提交到 master 分支
+```
+$ ghp-import -m "Generate Pelican site" --no-jekyll -b master output
+```
 
 在你的库里，只需要运行 `ghp-import $DOCS_DIR` ，`$DOCS_DIR`是准备**built**的文档的路径。这个操作会在你的gh-pages分支做一次提交(commit)。如果指定 `-p` 选项，就会尝试将分支push到github。缺省情况下，相当于运行 `git push origin gh-pages`，你也可以用 `-r` flag来指定不同的remote。
 
