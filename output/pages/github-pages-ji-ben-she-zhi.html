@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="chinese (simplified)">
+<head>
+        <meta charset="utf-8" />
+        <title>github pages 基本设置</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="资料收集与整理 Atom Feed" />
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">资料收集与整理 </a></h1>
+                <nav><ul>
+                    <li class="active"><a href="/pages/github-pages-ji-ben-she-zhi.html">github pages 基本设置</a></li>
+                    <li><a href="/pages/dao-chu-ye-mian-de-gong-ju.html">导出页面的工具</a></li>
+                    <li><a href="/pages/markdownzhuan-htmlde-pythongong-ju.html">markdown转html的python工具</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+    <h1 class="entry-title">github pages 基本设置</h1>
+    
+    <h1>github pages 基本设置</h1>
+<h2>注册</h2>
+<p>进入 <a href="https://github.com">github</a>，注册一个账户。</p>
+<h2>创建一个库（repository）</h2>
+<p>github支持两种静态网站。</p>
+<h3>1. 库名为 github.io （依据参考资料，尚未测试）</h3>
+<p>使用该库名，访问链接问 username.github.io/index.html
+github将使用master作为网站的内容。</p>
+<h3>2. 其他名字的库</h3>
+<p>库创建好之后，点击右上角setting，然后找到“github pages”设置，在"update site"条目下，选择"Launch automatic page generator"按钮，将会弹出一些引导页面，点击确认即可自动创建index.html（后续可更改）。并自动创建gh-pages branch。index.html文件就放在此分支中。
+访问链接为 username.github.io/库名/index.html</p>
+<h3>建议</h3>
+<p>将原始的md文件与展示的html文件，放到不同的分支。</p>
+<h2>使用github客户端或者git工具将库克隆(clone)到本地。</h2>
+<p>将网页文件上传到库中即可访问。
+可以先clone到本地，更改后在push到github，会比较方便。</p>
+<h2>有一些工具支持</h2>
+<p>github 推荐的工具是 JekyII。</p>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
