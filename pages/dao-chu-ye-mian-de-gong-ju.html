@@ -1,26 +1,72 @@
 <!DOCTYPE html>
 <html lang="chinese (simplified)">
 <head>
-        <meta charset="utf-8" />
-        <title>导出页面的工具</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="资料收集与整理 Atom Feed" />
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>资料收集与整理 - 导出页面的工具</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"/>
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda"/>
+        <link rel="stylesheet" type="text/css" href="/theme/css/main.css"/>
+            <link href="/
+feeds/all.atom.xml"
+                  type="application/atom+xml" rel="alternate" title="资料收集与整理 Atom Feed"/>
 </head>
+<body>
+<style>.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
+}
+@keyframes octocat-wave {
+    0%, 100% {
+        transform: rotate(0)
+    }
+    20%, 60% {
+        transform: rotate(-25deg)
+    }
+    40%, 80% {
+        transform: rotate(10deg)
+    }
+}
+@media (max-width: 500px) {
+    .github-corner:hover .octo-arm {
+        animation: none
+    }
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">资料收集与整理 </a></h1>
-                <nav><ul>
-                    <li><a href="/pages/github-pages-ji-ben-she-zhi.html">github pages 基本设置</a></li>
-                    <li><a href="/pages/zuo-wen-zhi-shi-shou-ji.html">作文知识收集</a></li>
-                    <li class="active"><a href="/pages/dao-chu-ye-mian-de-gong-ju.html">导出页面的工具</a></li>
-                    <li><a href="/pages/markdownzhuan-htmlde-pythongong-ju.html">markdown转html的python工具</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-<section id="content" class="body">
-    <h1 class="entry-title">导出页面的工具</h1>
-    
-    <p>使用ghp-import将重写gh-pages分支。使用前要确保该分支的数据已得到适当备份。这个工具假定gh-pages branch是100%导出的，因此，你不应该修改该分支的任何文件，否则在下次导出时会导致损失。</p>
+    .github-corner .octo-arm {
+        animation: octocat-wave 560ms ease-in-out
+    }
+}</style><div id="container">
+    <header>
+        <h1><a href="/">资料收集与整理</a></h1>
+            <ul class="social-media">
+                    <li><a href="#"><i class="fa fa-You can add links in your config file fa-lg" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-Another social link fa-lg" aria-hidden="true"></i></a></li>
+                    <li><a href="/
+feeds/all.atom.xml"
+                           type="application/atom+xml" rel="alternate"><i class="fa fa-rss fa-lg"
+                                                                          aria-hidden="true"></i></a></li>
+            </ul>
+        <p><em></em></p>
+    </header>
+    <nav>
+        <ul>
+                    <li><a href="/pages/github-pages-ji-ben-she-zhi.html">github pages 基本设置</a>
+                    </li>
+                    <li><a href="/pages/zuo-wen-zhi-shi-shou-ji.html">作文知识收集</a>
+                    </li>
+                    <li><a  class="active" href="/pages/dao-chu-ye-mian-de-gong-ju.html">导出页面的工具</a>
+                    </li>
+                    <li><a href="/pages/markdownzhuan-htmlde-pythongong-ju.html">markdown转html的python工具</a>
+                    </li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>导出页面的工具</h2>
+            
+            <p>使用ghp-import将重写gh-pages分支。使用前要确保该分支的数据已得到适当备份。这个工具假定gh-pages branch是100%导出的，因此，你不应该修改该分支的任何文件，否则在下次导出时会导致损失。</p>
 <h2>使用方法：</h2>
 <div class="highlight"><pre><span></span><code><span class="n">Usage</span><span class="p">:</span> <span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="n">DIRECTORY</span>
 
@@ -54,35 +100,15 @@
 <p>ghp-import is distributed under the Tumbolia Public License. See the LICENSE file for more information.</p>
 <p>参考：
 1. <a href="https://github.com/davisp/ghp-import">包作者文档</a></p>
-</section>
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>links</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
-
-                            <li><a href="#">You can add links in your config file</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
-
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
-
+        </section>
+     </main>
+    <footer>
+        <h6>
+            Copyright &copy 2018
+- 郑州峰 | Rendered by <a href="http://getpelican.com/">Pelican</a> |
+            Powered by <a href="http://python.org">Python</a>
+        </h6>
+    </footer>
+</div>
 </body>
 </html>
