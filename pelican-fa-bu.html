@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="chinese (simplified)">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="郑州峰" />
+
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content=", blog_tool, " />
+
+<meta property="og:title" content="pelican 发布 "/>
+<meta property="og:url" content="/pelican-fa-bu.html" />
+<meta property="og:description" content="生成 生成站点 使用缺省的theme产生一个site。 pelican /path/to/your/content/ [-o /path/to/your/output] [-s path/to/your/settings.py] 如果从quickstart配置缺省的content 生成到 output，并使用 publishconf.py， $ pelican content -o output -s publishconf.py 可缩减为 $ pelican content 生成部分文件 也可对单篇文章或者页面进行生成操作。需要注意：该命令需要制定输出的文件，也可指定多个文件。详情可参考Writing only selected content $ pelican --write-selected output/posts/my-post-title …" />
+<meta property="og:site_name" content="资料收集与整理" />
+<meta property="og:article:author" content="郑州峰" />
+<meta property="og:article:published_time" content="2020-07-20T00:00:00+08:00" />
+<meta name="twitter:title" content="pelican 发布 ">
+<meta name="twitter:description" content="生成 生成站点 使用缺省的theme产生一个site。 pelican /path/to/your/content/ [-o /path/to/your/output] [-s path/to/your/settings.py] 如果从quickstart配置缺省的content 生成到 output，并使用 publishconf.py， $ pelican content -o output -s publishconf.py 可缩减为 $ pelican content 生成部分文件 也可对单篇文章或者页面进行生成操作。需要注意：该命令需要制定输出的文件，也可指定多个文件。详情可参考Writing only selected content $ pelican --write-selected output/posts/my-post-title …">
+
+        <title>pelican 发布  · 资料收集与整理
+</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/theme/css/elegant.prod.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
+
+
+
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="/"><span class=site-name>资料收集与整理</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       "/"
+                                    >Home</a>
+                                </li>
+                                <li ><a href="/pages/zuo-wen-zhi-shi-shou-ji.html">作文知识收集</a></li>
+                                <li ><a href="/categories.html">Categories</a></li>
+                                <li ><a href="/tags.html">Tags</a></li>
+                                <li ><a href="/archives.html">Archives</a></li>
+                                <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="/pelican-fa-bu.html">
+                pelican 发布
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+            
+            <h2>生成</h2>
+<h3>生成站点</h3>
+<p>使用缺省的theme产生一个site。</p>
+<div class="highlight"><pre><span></span><code><span class="err">pelican /path/to/your/content/ [-o /path/to/your/output] [-s path/to/your/settings.py]</span>
+</code></pre></div>
+
+
+<p>如果从quickstart配置缺省的content 生成到 output，并使用 publishconf.py，</p>
+<div class="highlight"><pre><span></span><code>$ pelican content -o output -s publishconf.py
+</code></pre></div>
+
+
+<p>可缩减为</p>
+<div class="highlight"><pre><span></span><code>$ pelican content
+</code></pre></div>
+
+
+<h3>生成部分文件</h3>
+<p>也可对单篇文章或者页面进行生成操作。需要注意：该命令需要制定输出的文件，也可指定多个文件。详情可参考<a href="pelican --write-selected output/posts/my-post-title.html">Writing only selected content</a></p>
+<div class="highlight"><pre><span></span><code>$ pelican --write-selected output/posts/my-post-title.html
+</code></pre></div>
+
+
+<h3>自动生成</h3>
+<p>如果你觉得每次修改后手工启动生成太麻烦，可以设置pelican为监视模式，每次修改后，pelican会自动重新生成。</p>
+<div class="highlight"><pre><span></span><code>$ pelican --autoreload （或者是 -r）
+</code></pre></div>
+
+
+<p>对于非windows系统，可以在自动生成的同时，将output放到 http://localhost:8000 服务上。</p>
+<div class="highlight"><pre><span></span><code>$ pelican --autoreload --listen
+</code></pre></div>
+
+
+<h2>查看产生的文件</h2>
+<h3>直接用浏览器查看</h3>
+<p>由于是静态站点，所以可以用浏览器直接查看output中的文件。但是部分链接文件（如css，以及链接的其他文件）会有问题。</p>
+<h3>内建server</h3>
+<p>pelican提供了一个内建的server，通过 http://localhost:8000/ 可以查看相关文件。(<em>windows系统异常</em>)</p>
+<div class="highlight"><pre><span></span><code>$ pelican --listen
+</code></pre></div>
+
+
+<h2>部署</h2>
+<h3>生成</h3>
+<p>在部署前，可以使用publishconf.py重新生成整个网站</p>
+<div class="highlight"><pre><span></span><code>$ pelican content -s publishconf.py
+</code></pre></div>
+
+
+<p>可以通过 <code>from pelicanconf import *</code>,在 publishconf.py 中导入 pelicanconf 的配置。使用 pelican-quickstart 产生的 publishconf.py 中包含此行语句。</p>
+<h3>部署到SSH服务器</h3>
+<p>如果你通过SSH访问Nginx或者Apache服务器，你可以使用 <code>rsync</code> 来传送站点文件。</p>
+<div class="highlight"><pre><span></span><code><span class="err">rsync -avc --delete output/ host.example.com:/var/www/your-site/</span>
+</code></pre></div>
+
+
+<h3>部署到 github</h3>
+<p>将output中的文件导出到master分支中</p>
+<div class="highlight"><pre><span></span><code><span class="err">$</span> <span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Generate Pelican site&quot;</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">jekyll</span> <span class="o">-</span><span class="n">b</span> <span class="n">master</span> <span class="n">output</span>
+</code></pre></div>
+
+
+<h2>将本地内容推送到github即可访问相关网页</h2>
+<div class="highlight"><pre><span></span><code>$ git add content
+$ git commit -m <span class="s1">&#39;added a first post, a photo and an about page&#39;</span> $ git push origin content
+</code></pre></div>
+
+
+<h2>访问</h2>
+<div class="highlight"><pre><span></span><code><span class="c">https://username.github.io</span>
+</code></pre></div>
+
+
+<h2>自动化</h2>
+<h3>invoke</h3>
+<p>利用在quickstart生成的makefile和task.py，使用invoke可以简化上述流程。
+首先需要单独安装 invoke (可能需要sudo权限)</p>
+<div class="highlight"><pre><span></span><code>$ pip install invoke
+</code></pre></div>
+
+
+<p>如果有特殊需要，可以修改tasks.py。然后生成站点：</p>
+<div class="highlight"><pre><span></span><code>$ invoke build
+</code></pre></div>
+
+
+<p>如果希望每次改动后自动重建站点，就使用下面的命令：</p>
+<div class="highlight"><pre><span></span><code>$ invoke regenerate
+</code></pre></div>
+
+
+<p>启动本地浏览服务 http://localhost:8000/:</p>
+<div class="highlight"><pre><span></span><code>$ invoke serve
+</code></pre></div>
+
+
+<p>每次修改后自动重载浏览服务，需要先安装 <code>pip install livereload</code>，然后使用如下命令：</p>
+<div class="highlight"><pre><span></span><code>$ invoke livereload
+</code></pre></div>
+
+
+<p>SSH 部署</p>
+<div class="highlight"><pre><span></span><code>$ invoke publish
+</code></pre></div>
+
+
+<h3>make</h3>
+<p>在POSIX系统下，利用make命令，结合makefile，也可以实现自动化（类似invoke）</p>
+<p>参考：
+<a href="https://zhuanlan.zhihu.com/p/122956498">使用 Python 在 GitHub 上运行你的博客</a></p>
+
+
+             
+ 
+            
+            
+            
+
+
+
+
+
+
+            <hr/>
+        </div>
+        <section id="article-sidebar" class="span2">
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2020-07-20T00:00:00+08:00">7月 20, 2020</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#blog_tool-ref">blog_tool</a>
+<h4>Contact</h4>
+<div id="sidebar-social-link">
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>

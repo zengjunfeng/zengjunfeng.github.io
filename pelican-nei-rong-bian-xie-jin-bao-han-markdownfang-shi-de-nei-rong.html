@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="chinese (simplified)">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="郑州峰" />
+
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
+<meta name="keywords" content=", blog_tool, " />
+
+<meta property="og:title" content="pelican 内容编写（仅包含markdown方式的内容） "/>
+<meta property="og:url" content="/pelican-nei-rong-bian-xie-jin-bao-han-markdownfang-shi-de-nei-rong.html" />
+<meta property="og:description" content="文件元数据 pelican试图从文件系统中获取信息（例如：文章目录），但还是需要你以元数据的形式在文件内提供一些信息。 Markdown 的元数据语法如下： Title: My super title Date: 2010-12-03 10:20 Modified: 2010-12-05 19:30 Category: Python Tags: pelican, publishing Slug: my-super-post Authors: Alexis Metaireau, Conan Doyle Summary: Short version for index and feeds 你也可以有自定义的元数据关键字，只要跟保留的元数据关键字不冲突即可。 Metadata Description title Title …" />
+<meta property="og:site_name" content="资料收集与整理" />
+<meta property="og:article:author" content="郑州峰" />
+<meta property="og:article:published_time" content="2020-07-20T00:00:00+08:00" />
+<meta name="twitter:title" content="pelican 内容编写（仅包含markdown方式的内容） ">
+<meta name="twitter:description" content="文件元数据 pelican试图从文件系统中获取信息（例如：文章目录），但还是需要你以元数据的形式在文件内提供一些信息。 Markdown 的元数据语法如下： Title: My super title Date: 2010-12-03 10:20 Modified: 2010-12-05 19:30 Category: Python Tags: pelican, publishing Slug: my-super-post Authors: Alexis Metaireau, Conan Doyle Summary: Short version for index and feeds 你也可以有自定义的元数据关键字，只要跟保留的元数据关键字不冲突即可。 Metadata Description title Title …">
+
+        <title>pelican 内容编写（仅包含markdown方式的内容）  · 资料收集与整理
+</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/theme/css/elegant.prod.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
+
+
+
+    </head>
+    <body>
+        <div id="content">
+            <div class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="/"><span class=site-name>资料收集与整理</span></a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right top-menu">
+                                <li >
+                                    <a href=
+                                       "/"
+                                    >Home</a>
+                                </li>
+                                <li ><a href="/pages/zuo-wen-zhi-shi-shou-ji.html">作文知识收集</a></li>
+                                <li ><a href="/categories.html">Categories</a></li>
+                                <li ><a href="/tags.html">Tags</a></li>
+                                <li ><a href="/archives.html">Archives</a></li>
+                                <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span1"></div>
+                    <div class="span10">
+<article itemscope>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+        <h1>
+            <a href="/pelican-nei-rong-bian-xie-jin-bao-han-markdownfang-shi-de-nei-rong.html">
+                pelican 内容编写（仅包含markdown方式的内容）
+            </a>
+        </h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+            
+            <h1>文件元数据</h1>
+<p>pelican试图从文件系统中获取信息（例如：文章目录），但还是需要你以元数据的形式在文件内提供一些信息。
+Markdown 的元数据语法如下：</p>
+<div class="highlight"><pre><span></span><code><span class="n">Title</span><span class="o">:</span> <span class="n">My</span> <span class="kd">super</span> <span class="n">title</span>
+<span class="n">Date</span><span class="o">:</span> <span class="mi">2010</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">03</span> <span class="mi">10</span><span class="o">:</span><span class="mi">20</span>
+<span class="n">Modified</span><span class="o">:</span> <span class="mi">2010</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">05</span> <span class="mi">19</span><span class="o">:</span><span class="mi">30</span>
+<span class="n">Category</span><span class="o">:</span> <span class="n">Python</span>
+<span class="n">Tags</span><span class="o">:</span> <span class="n">pelican</span><span class="o">,</span> <span class="n">publishing</span>
+<span class="n">Slug</span><span class="o">:</span> <span class="n">my</span><span class="o">-</span><span class="kd">super</span><span class="o">-</span><span class="n">post</span>
+<span class="n">Authors</span><span class="o">:</span> <span class="n">Alexis</span> <span class="n">Metaireau</span><span class="o">,</span> <span class="n">Conan</span> <span class="n">Doyle</span>
+<span class="n">Summary</span><span class="o">:</span> <span class="n">Short</span> <span class="n">version</span> <span class="k">for</span> <span class="n">index</span> <span class="n">and</span> <span class="n">feeds</span>
+</code></pre></div>
+
+
+<p>你也可以有自定义的元数据关键字，只要跟保留的元数据关键字不冲突即可。</p>
+<table>
+<thead>
+<tr>
+<th>Metadata</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>title</code></td>
+<td align="left">Title of the article or page</td>
+</tr>
+<tr>
+<td><code>date</code></td>
+<td align="left">Publication date (e.g., YYYY-MM-DD HH:SS)</td>
+</tr>
+<tr>
+<td><code>modified</code></td>
+<td align="left">Modification date (e.g., YYYY-MM-DD HH:SS)</td>
+</tr>
+<tr>
+<td><code>tags</code></td>
+<td align="left">Content tags, separated by commas</td>
+</tr>
+<tr>
+<td><code>keywords</code></td>
+<td align="left">Content keywords, separated by commas (HTML content only)</td>
+</tr>
+<tr>
+<td><code>category</code></td>
+<td align="left">Content category (one only — not multiple)</td>
+</tr>
+<tr>
+<td><code>slug</code></td>
+<td align="left">Identifier used in URLs and translations</td>
+</tr>
+<tr>
+<td><code>author</code></td>
+<td align="left">Content author, when there is only one</td>
+</tr>
+<tr>
+<td><code>authors</code></td>
+<td align="left">Content authors, when there are multiple。用逗号分隔的列表。</td>
+</tr>
+<tr>
+<td><code>summary</code></td>
+<td align="left">Brief description of content for index pages 如果你没有清楚的指定此数据，则将依据设置中的<code>SUMMARY_MAX_LENGTH</code>从文章开始截取数据作为summary</td>
+</tr>
+<tr>
+<td><code>lang</code></td>
+<td align="left">Content language ID (en, fr, etc.)</td>
+</tr>
+<tr>
+<td><code>translation</code></td>
+<td align="left">Is content is a translation of another (true or false)</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td align="left">Content status: draft, hidden, or published</td>
+</tr>
+<tr>
+<td><code>template</code></td>
+<td align="left">Name of template to use to generate content (without extension)</td>
+</tr>
+<tr>
+<td><code>save_as</code></td>
+<td align="left">Save content to this relative file path</td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td align="left">URL to use for this article/page</td>
+</tr>
+</tbody>
+</table>
+<p>除了<code>title</code>外，所有元数据都不是必须的。如果没有指定，<code>DEFAULT_DATE</code>被设置为<code>'fs'</code>，pelican依赖文件的"mtime" 时间戳，<code>catagory</code>为文件所在目录。如果不希望如此，需要设置<code>USE_FOLDER_AS_CATEGORY</code>为<code>False</code>。</p>
+<p>如果想自动使用文件名做<code>title</code>，可在设置中增加一个语句：
+<code>FILENAME_METADATA = '(?P&lt;title&gt;.*)'</code></p>
+<p>通过设置<code>FILENAME_METADATA</code>，你也可以通过正则表达式从文件名中抽取元数据，所有匹配的命名组都会被设置为元数据。<code>FILENAME_METADATA</code>的缺省设置只会从文件名中抽取日期。示例：</p>
+<div class="highlight"><pre><span></span><code><span class="err">&#39;(?P&lt;date&gt;\d{4}-\d{2}-\d{2})_(?P&lt;slug&gt;.*)&#39;</span>
+</code></pre></div>
+
+
+<h1>页面</h1>
+<p><code>content\pages</code>目录下的所有的文件都会被用来产生静态页面。</p>
+<p>可以使用<code>DISPLAY_PAGES_ON_MENU</code>设置来控制是否所有这些页面都被显示在主导航菜单。缺省设置是<code>True</code>。如果想在此菜单中，排除任何页面，那么只需在该页面的元数据中增加<code>status:hidden</code>即可。</p>
+<h1>静态内容</h1>
+<p>静态文件是跟文章和页面不同，但同样被拷贝到output文件夹的文件。通过<code>pelicanconf.py</code>中的<code>STATIC_PATHS</code>设置，可以控制那些静态文件被拷贝。pelican的缺省配置包括<code>images</code>目录，其他需要手工加入。</p>
+<h2>同一目录下的混合内容</h2>
+<p>pelican支持把静态文件和页面文件放到同一个目录下。这种目录必须同时加入到<code>STATIC_PATHS</code>和<code>PAGE_PATHS</code>中（或<code>STATIC_PATHS</code>和<code>ARTICLE_PATHS</code>）。pelican会识别和处理页面文件，并把拷贝其他文件（就像它们在一个分开的静态文件目录中一样）</p>
+<p><em>注意：</em> 静态和页面文件放在同一个目录中，在生成的站点中，未必会在同一个位置。要想使之在一起，最简单的方式是使用<code>{attach}</code> 链接语法。</p>
+<h2>链接到内部内容（页面、文章）</h2>
+<p>可以在原始内容层次指定站内链接。
+为了链接到内部内容（content目录下的文件），使用下述语法<code>{filename}path/to/file</code>。<em>注意：</em> <code>filename</code>是关键字，后面是实际的path，在所有操作系统中都要使用<code>/</code>。</p>
+<p>举例：对于如下的文件结构</p>
+<div class="highlight"><pre><span></span><code><span class="err">website/</span>
+<span class="err">├── content</span>
+<span class="err">│   ├── category/</span>
+<span class="err">│   │   └── article1.rst</span>
+<span class="err">│   ├── article2.md</span>
+<span class="err">│   └── pages</span>
+<span class="err">│       └── about.md</span>
+<span class="err">└── pelican.conf.py</span>
+</code></pre></div>
+
+
+<p>article1.rst</p>
+<div class="highlight"><pre><span></span><code><span class="n">The</span> <span class="k">first</span> <span class="n">article</span>
+<span class="o">#################</span>
+
+<span class="p">:</span><span class="nb">date</span><span class="p">:</span> <span class="mi">2012</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">01</span> <span class="mi">10</span><span class="p">:</span><span class="mi">02</span>
+
+<span class="n">See</span> <span class="n">below</span> <span class="n">intra</span><span class="o">-</span><span class="n">site</span> <span class="n">link</span> <span class="n">examples</span> <span class="k">in</span> <span class="n">reStructuredText</span> <span class="n">format</span><span class="p">.</span>
+
+<span class="o">`</span><span class="n">a</span> <span class="n">link</span> <span class="k">relative</span> <span class="k">to</span> <span class="n">the</span> <span class="k">current</span> <span class="n">file</span> <span class="o">&lt;</span><span class="err">{</span><span class="n">filename</span><span class="err">}</span><span class="p">..</span><span class="o">/</span><span class="n">article2</span><span class="p">.</span><span class="n">md</span><span class="o">&gt;`</span><span class="n">_</span>
+<span class="o">`</span><span class="n">a</span> <span class="n">link</span> <span class="k">relative</span> <span class="k">to</span> <span class="n">the</span> <span class="n">content</span> <span class="n">root</span> <span class="o">&lt;</span><span class="err">{</span><span class="n">filename</span><span class="err">}</span><span class="o">/</span><span class="n">article2</span><span class="p">.</span><span class="n">md</span><span class="o">&gt;`</span><span class="n">_</span>
+</code></pre></div>
+
+
+<p>article2.md</p>
+<div class="highlight"><pre><span></span><code><span class="n">Title</span><span class="o">:</span> <span class="n">The</span> <span class="n">second</span> <span class="n">article</span>
+<span class="n">Date</span><span class="o">:</span> <span class="mi">2012</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">01</span> <span class="mi">10</span><span class="o">:</span><span class="mi">02</span>
+
+<span class="n">See</span> <span class="n">below</span> <span class="n">intra</span><span class="o">-</span><span class="n">site</span> <span class="n">link</span> <span class="n">examples</span> <span class="k">in</span> <span class="n">Markdown</span> <span class="n">format</span><span class="o">.</span>
+
+<span class="o">[</span><span class="n">a</span> <span class="n">link</span> <span class="n">relative</span> <span class="n">to</span> <span class="n">the</span> <span class="n">current</span> <span class="n">file</span><span class="o">]({</span><span class="n">filename</span><span class="o">}</span><span class="n">category</span><span class="o">/</span><span class="n">article1</span><span class="o">.</span><span class="na">rst</span><span class="o">)</span>
+<span class="o">[</span><span class="n">a</span> <span class="n">link</span> <span class="n">relative</span> <span class="n">to</span> <span class="n">the</span> <span class="n">content</span> <span class="n">root</span><span class="o">]({</span><span class="n">filename</span><span class="o">}/</span><span class="n">category</span><span class="o">/</span><span class="n">article1</span><span class="o">.</span><span class="na">rst</span><span class="o">)</span>
+</code></pre></div>
+
+
+<h2>链接到静态文件</h2>
+<p>可以使用<code>{static}path/to/file</code>链接到静态内容。使用此语法pelican将会自动把链接的文件拷贝到output目录，即使该文件所在目录没有包含在<code>pelicanconf.py</code>配置文件的<code>STATIC_PATHS</code>设置中。
+举例：如下是项目的content目录</p>
+<div class="highlight"><pre><span></span><code><span class="err">content</span>
+<span class="err">├── images</span>
+<span class="err">│   └── han.jpg</span>
+<span class="err">├── pdfs</span>
+<span class="err">│   └── menu.pdf</span>
+<span class="err">└── pages</span>
+<span class="err">    └── test.md</span>
+</code></pre></div>
+
+
+<p><code>test.md</code>内容为</p>
+<div class="highlight"><pre><span></span><code><span class="o">!</span><span class="p">[</span><span class="n">Alt</span> <span class="n">Text</span><span class="p">]({</span><span class="k">static</span><span class="p">}</span><span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="n">han</span><span class="p">.</span><span class="n">jpg</span><span class="p">)</span>
+<span class="p">[</span><span class="n">Our</span> <span class="n">Menu</span><span class="p">]({</span><span class="k">static</span><span class="p">}</span><span class="o">/</span><span class="n">pdfs</span><span class="o">/</span><span class="n">menu</span><span class="p">.</span><span class="n">pdf</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>站点生成时，<code>han.jpg</code>将被拷贝到<code>output/images/han.jpg</code>，<code>menu.pdf</code> 将被拷贝到<code>output/pdfs/menu.pdf</code>，并在<code>test.md</code>中写入适当的链接。</p>
+<h2>attaching 静态文件</h2>
+<p>语法为 <code>{attach}path/to/file</code>。工作方式与<code>{static}</code>类似。如果静态文件起初在链接源文件的子目录下，那么在output也会保持这个关系。否则，它将变成该文件的邻居。
+示例：项目目录结构</p>
+<div class="highlight"><pre><span></span><code><span class="err">content</span>
+<span class="err">├── blog</span>
+<span class="err">│   ├── icons</span>
+<span class="err">│   │   └── icon.png</span>
+<span class="err">│   ├── photo.jpg</span>
+<span class="err">│   └── testpost.md</span>
+<span class="err">└── downloads</span>
+<span class="err">    └── archive.zip</span>
+</code></pre></div>
+
+
+<p><code>pelicanconf.py</code>相关设置：</p>
+<div class="highlight"><pre><span></span><code><span class="err">PATH = &#39;content&#39;</span>
+<span class="err">ARTICLE_PATHS = [&#39;blog&#39;]</span>
+<span class="err">ARTICLE_SAVE_AS = &#39;{date:%Y}/{slug}.html&#39;</span>
+<span class="err">ARTICLE_URL = &#39;{date:%Y}/{slug}.html&#39;</span>
+</code></pre></div>
+
+
+<p><code>testpost.md</code>相关内容</p>
+<div class="highlight"><pre><span></span><code><span class="nl">Title</span><span class="p">:</span> <span class="n">Test</span> <span class="n">Post</span>
+<span class="nl">Category</span><span class="p">:</span> <span class="n">test</span>
+<span class="nl">Date</span><span class="p">:</span> <span class="mi">2014</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">31</span>
+
+<span class="o">!</span><span class="p">[</span><span class="n">Icon</span><span class="p">]({</span><span class="n">attach</span><span class="p">}</span><span class="n">icons</span><span class="o">/</span><span class="n">icon</span><span class="p">.</span><span class="n">png</span><span class="p">)</span>
+<span class="o">!</span><span class="p">[</span><span class="n">Photo</span><span class="p">]({</span><span class="n">attach</span><span class="p">}</span><span class="n">photo</span><span class="p">.</span><span class="n">jpg</span><span class="p">)</span>
+<span class="p">[</span><span class="n">Downloadable</span> <span class="n">File</span><span class="p">]({</span><span class="n">attach</span><span class="p">}</span><span class="o">/</span><span class="n">downloads</span><span class="o">/</span><span class="n">archive</span><span class="p">.</span><span class="n">zip</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>生成的站点具有的output目录结构为</p>
+<div class="highlight"><pre><span></span><code><span class="err">output</span>
+<span class="err">└── 2014</span>
+<span class="err">    ├── archive.zip</span>
+<span class="err">    ├── icons</span>
+<span class="err">    │   └── icon.png</span>
+<span class="err">    ├── photo.jpg</span>
+<span class="err">    └── test-post.html</span>
+</code></pre></div>
+
+
+<p><em>注意：</em> 所有使用<code>{attach}</code>链接的文件，都在aritcles的output目录之内，或之下。</p>
+<p>如果一个静态文件被链接了多次，<code>{attach}</code>将只会在链接的第一次处理时进行拷贝。之后的<code>{attach}</code>链接其处理跟<code>{statci}</code>相同。这可以防止破坏已处理的链接。</p>
+<p><em>从多个文件链接同一个文件时要小心！</em> 应为pelican没有定义文件处理顺序，所以每次处理的顺序可能不同。使用<code>{attach}</code>链接多个文件时，可能会导致output目录中相关文件的位置每次生成站点时都不一样，这可能会导致外部站点链接到这个文件的链接失效。</p>
+<p><em>所以建议仅在同时满足下述条件时使用<code>{attach}</code>链接多个文件：</em>
+1. 所有链接都指向一个文件。
+2. 源链接文件都在一个目录下。</p>
+<h2>链接到authors, catagories, index, - tags</h2>
+<p><code>{author}name</code>, <code>{category}foobar</code>, <code>{index}</code>, <code>{tag}tagname</code></p>
+<h1>包含其他文件</h1>
+<p>对于Markdown，需要依赖其他扩展，例如 <a href="https://github.com/neurobin/mdx_include">mdx_include plugin</a>：</p>
+<div class="highlight"><pre><span></span><code><span class="err">```html</span>
+<span class="err">{! template.html !}</span>
+</code></pre></div>
+
+
+<p>```</p>
+
+
+             
+ 
+            
+            
+            
+
+
+
+
+
+
+            <hr/>
+        </div>
+        <section id="article-sidebar" class="span2">
+            <h4>Published</h4>
+            <time itemprop="dateCreated" datetime="2020-07-20T00:00:00+08:00">7月 20, 2020</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#blog_tool-ref">blog_tool</a>
+<h4>Contact</h4>
+<div id="sidebar-social-link">
+</div>
+            
+
+
+
+
+
+            
+
+
+
+
+
+        </section>
+</div>
+</article>
+                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        </div>
+<footer>
+
+
+
+
+    <div id="fpowered">
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+    </div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    <script>
+    (function () {
+        if (window.location.hash.match(/^#comment-\d+$/)) {
+            $('#comment_thread').collapse('show');
+        }
+    })();
+    window.onhashchange=function(){
+        if (window.location.hash.match(/^#comment-\d+$/))
+            window.location.reload(true);
+    }
+    $('#comment_thread').on('shown', function () {
+        var link = document.getElementById('comment-accordion-toggle');
+        var old_innerHTML = link.innerHTML;
+        $(link).fadeOut(200, function() {
+            $(this).text('Click here to hide comments').fadeIn(200);
+        });
+        $('#comment_thread').on('hidden', function () {
+            $(link).fadeOut(200, function() {
+                $(this).text(old_innerHTML).fadeIn(200);
+            });
+        })
+    })
+</script>
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+        License : MIT -->
+</html>
